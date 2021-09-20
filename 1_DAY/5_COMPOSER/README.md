@@ -7,4 +7,4 @@
 - stwórz gettery i settery do klas;
 - utwórz kilka klubów i kilku piłkarzy, zadbaj o to, żeby w chwili tworzenia piłkarza automatycznie dodawał się on do klubu
 - stwórz metodę `transfer(club)` pozwalającą na przejście piłkarza z jednego klubu do drugiego 
-- pamiętaj o używaniu skłądni `use/namsepace`
+- pamiętaj o używaniu składni `use/namsepace`

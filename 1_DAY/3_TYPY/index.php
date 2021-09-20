@@ -2,7 +2,7 @@
 
 $langs = ["JS", "PHP", "KOTLIN", "JAVA"];
 
-function map_func($arg)
+function map_func(string $arg): string
 {
     return $arg . ' ' . 'jest super!' . PHP_EOL;
 }
@@ -11,7 +11,7 @@ $mix = array_map('map_func', $langs);
 
 var_dump($mix);
 
-function higherOrderFunction($a, $b, $someFunction)
+function higherOrderFunction(int $a, int $b, callable $someFunction)
 {
     return call_user_func($someFunction, $a, $b);
 }
@@ -32,14 +32,14 @@ class Person
     private $name;
     private $lastName;
 
-    public function __construct($age, $name, $lastName)
+    public function __construct(int $age, string $name, string $lastName)
     {
         $this->age = $age;
         $this->name = $name;
         $this->lastName = $lastName;
     }
 
-    public function getAge()
+    public function getAge(): int
     {
         return $this->age;
     }
@@ -50,29 +50,29 @@ class Person
         $this->age = $age;
     }
 
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
 
-    public function setName($name)
+    public function setName($name) : void
     {
         $this->name = $name;
     }
 
 
-    public function getLastName()
+    public function getLastName() : string
     {
         return $this->lastName;
     }
 
 
-    public function setLastName($lastName)
+    public function setLastName($lastName) : void
     {
         $this->lastName = $lastName;
     }
 
 }
 
-$me = new Person("Adam", "Małysz", 40);
+$me = new Person(23, "Adam", "Małysz");
