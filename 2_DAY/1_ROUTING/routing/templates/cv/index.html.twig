@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CvController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <form method="POST" action="{{ path('cv') }}">
+
+        <input placeholder="name" type="text" name="name">
+
+        <input placeholder="lastname" type="text" name="lastname">
+
+        <input placeholder="age" type="number" name="age">
+
+        <input placeholder="interest" type="text" name="interest">
+        <button>Send</button>
+    </form>
+</div>
+{% endblock %}
